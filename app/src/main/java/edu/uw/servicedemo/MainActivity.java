@@ -21,7 +21,9 @@ public class MainActivity extends AppCompatActivity {
     //when "Start" button is pressed
     public void handleStart(View v){
         Log.i(TAG, "Start pressed");
-
+        Intent intent = new Intent(MainActivity.this, CountingService.class);
+        startService(intent); //send intent to counting service
+        finish();
 
     }
 
